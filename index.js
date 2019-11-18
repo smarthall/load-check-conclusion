@@ -6,7 +6,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2);
   console.log(`The event payload: ${payload}`);
 
-  core.setOutput("conclusion", payload.check_run.conclusion);
+  core.setOutput("conclusion", github.context.payload.check_run.conclusion);
 } catch (error) {
   core.setFailed(error.message);
 }
