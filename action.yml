@@ -1,0 +1,10 @@
+---
+name: 'Load Check Conclusion'
+description: 'Loads the conclusion of a check into an output'
+outputs:
+  conclusion:
+    description: 'The conclusion of the check that triggered this run'
+runs:
+  using: 'node12'
+  main: 'index.js'
+  
